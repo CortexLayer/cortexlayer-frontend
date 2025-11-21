@@ -30,7 +30,7 @@ const SelectedPlan = () => {
             <nav className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3">
-                        <img src="/logo.png" alt="CortexLayer" className="h-10 w-10" />
+                        <img src="/cortexlayer.png" alt="CortexLayer" className="h-10 w-10" />
                         <span className="text-2xl font-bold tracking-tighter text-white">CortexLayer<sup className="text-sm ml-0.5">™</sup></span>
                     </Link>
                     <Link to="/" className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">

@@ -93,7 +93,7 @@ CortexLayer™ is a cutting-edge AI automation platform that delivers hosted, ma
 ```
 frontend/
 ├── public/              # Static assets
-│   └── logo.png
+│   └── cortexlayer.png
 ├── src/
 │   ├── components/      # Reusable UI components
 │   │   ├── Navbar.jsx

@@ -12,7 +12,9 @@ const Footer = () => {
 
     useEffect(() => {
         const ctx = gsap.context(() => {
-            const letters = textRef.current.querySelectorAll('.footer-letter');
+            const letters = textRef.current?.querySelectorAll('.footer-letter');
+
+            if (!letters || letters.length === 0) return;
 
             // Animate 'E' (index 4)
             gsap.to(letters[4], {
@@ -39,28 +41,32 @@ const Footer = () => {
             });
 
             // Animate top LAYER line - scroll left
-            gsap.to(topLayerRef.current, {
-                x: -200,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top bottom",
-                    end: "bottom bottom",
-                    scrub: 1
-                }
-            });
+            if (topLayerRef.current) {
+                gsap.to(topLayerRef.current, {
+                    x: -200,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top bottom",
+                        end: "bottom bottom",
+                        scrub: 1
+                    }
+                });
+            }
 
             // Animate bottom LAYER line - scroll right
-            gsap.to(bottomLayerRef.current, {
-                x: 200,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top bottom",
-                    end: "bottom bottom",
-                    scrub: 1
-                }
-            });
+            if (bottomLayerRef.current) {
+                gsap.to(bottomLayerRef.current, {
+                    x: 200,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top bottom",
+                        end: "bottom bottom",
+                        scrub: 1
+                    }
+                });
+            }
         }, containerRef);
 
         return () => ctx.revert();
@@ -77,8 +83,8 @@ const Footer = () => {
                         <p className="text-gray-400 mb-8 max-w-md">
                             Ready to automate your business? Let's build something extraordinary together.
                         </p>
-                        <a href="mailto:contact@cortexlayer.com" className="text-lg hover:text-gray-300 transition-colors underline underline-offset-4">
-                            contact@cortexlayer.com
+                        <a href="mailto:hello@cortexlayer.com" className="text-lg hover:text-gray-300 transition-colors underline underline-offset-4">
+                            hello@cortexlayer.com
                         </a>
                     </div>
                     <div className="flex flex-col md:items-end justify-between">

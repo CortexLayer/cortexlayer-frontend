@@ -14,7 +14,7 @@ const Navbar = () => {
                         transition={{ duration: 0.5 }}
                         className="flex items-center gap-3 cursor-pointer"
                     >
-                        <img src="/logo.png" alt="CortexLayer" className="h-10 w-10" />
+                        <img src="/cortexlayer.png" alt="CortexLayer" className="h-10 w-10" />
                         <span className="text-2xl font-bold tracking-tighter text-white">CortexLayer<sup className="text-sm ml-0.5">™</sup></span>
                     </motion.div>
                 </Link>
