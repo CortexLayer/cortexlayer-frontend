@@ -56,7 +56,7 @@ const BookConsultation = () => {
                 <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                     <Link to="/" className="flex items-center gap-3">
                         <img src="/logo.png" alt="CortexLayer" className="h-10 w-10" />
-                        <span className="text-2xl font-bold tracking-tighter text-white">CortexLayer</span>
+                        <span className="text-2xl font-bold tracking-tighter text-white">CortexLayer<sup className="text-sm ml-0.5">™</sup></span>
                     </Link>
                     <Link to="/" className="text-sm text-gray-400 hover:text-white transition-colors">
                         ← Back to Home

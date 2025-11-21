@@ -27,7 +27,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold mb-1">Email Us</h3>
-                                    <p className="text-gray-400">hello@cortexlayer.com</p>
+                                    <p className="text-gray-400">contact@cortexlayer.com</p>
                                 </div>
                             </div>
 

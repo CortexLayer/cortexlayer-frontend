@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const plans = [
     {
@@ -51,6 +52,11 @@ const plans = [
 
 const Pricing = () => {
     const [selectedPlan, setSelectedPlan] = useState(1); // Default to Growth plan
+    const navigate = useNavigate();
+
+    const handleGetStarted = (plan) => {
+        navigate('/selected-plan', { state: { plan } });
+    };
 
     return (
         <section id="pricing" className="py-32 bg-black text-white">
@@ -82,10 +88,10 @@ const Pricing = () => {
                                 transition={{ delay: index * 0.1 }}
                                 onClick={() => setSelectedPlan(index)}
                                 className={`relative p-8 rounded-2xl border-2 flex flex-col cursor-pointer transition-all duration-500 ${isSelected
-                                        ? `${plan.borderColor} bg-white/10 shadow-2xl ${plan.glowColor} scale-105`
-                                        : plan.highlight
-                                            ? "bg-white/5 border-white/20 hover:border-white/40"
-                                            : "bg-black border-white/10 hover:border-white/20"
+                                    ? `${plan.borderColor} bg-white/10 shadow-2xl ${plan.glowColor} scale-105`
+                                    : plan.highlight
+                                        ? "bg-white/5 border-white/20 hover:border-white/40"
+                                        : "bg-black border-white/10 hover:border-white/20"
                                     }`}
                                 whileHover={{ scale: isSelected ? 1.05 : 1.02 }}
                                 whileTap={{ scale: 0.98 }}
@@ -96,8 +102,8 @@ const Pricing = () => {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${index === 0 ? 'from-blue-500/20 to-cyan-500/20' :
-                                                index === 1 ? 'from-indigo-500/20 to-purple-500/20' :
-                                                    'from-purple-500/20 to-pink-500/20'
+                                            index === 1 ? 'from-indigo-500/20 to-purple-500/20' :
+                                                'from-purple-500/20 to-pink-500/20'
                                             } -z-10 blur-xl`}
                                     />
                                 )}
@@ -150,14 +156,18 @@ const Pricing = () => {
                                 </div>
 
                                 <button
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleGetStarted(plan);
+                                    }}
                                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${isSelected
-                                            ? "bg-gradient-to-r from-white via-gray-200 to-gray-400 text-black hover:shadow-lg"
-                                            : plan.highlight
-                                                ? "bg-white text-black hover:bg-gray-200"
-                                                : "bg-white/10 text-white hover:bg-white/20"
+                                        ? "bg-gradient-to-r from-white via-gray-200 to-gray-400 text-black hover:shadow-lg"
+                                        : plan.highlight
+                                            ? "bg-white text-black hover:bg-gray-200"
+                                            : "bg-white/10 text-white hover:bg-white/20"
                                         }`}
                                 >
-                                    {isSelected ? 'Selected Plan' : 'Get Started'}
+                                    {isSelected ? 'Continue with Plan' : 'Get Started'}
                                 </button>
                             </motion.div>
                         );

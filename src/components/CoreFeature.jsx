@@ -86,7 +86,7 @@ const CoreFeature = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-tight">
-                            The CortexLayer <br />
+                            The CortexLayer<sup className="text-3xl ml-1">™</sup> <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
                                 Engine
                             </span>
@@ -107,10 +107,10 @@ const CoreFeature = () => {
                                     <div
                                         key={i}
                                         className={`flex items-start gap-4 transition-all duration-700 ease-out ${isActive
-                                                ? 'opacity-100 translate-y-0 scale-100'
-                                                : isPast
-                                                    ? 'opacity-30 -translate-y-4 scale-95'
-                                                    : 'opacity-30 translate-y-4 scale-95'
+                                            ? 'opacity-100 translate-y-0 scale-100'
+                                            : isPast
+                                                ? 'opacity-30 -translate-y-4 scale-95'
+                                                : 'opacity-30 translate-y-4 scale-95'
                                             }`}
                                     >
                                         <div className={`p-3 rounded-xl bg-white/5 border transition-all duration-500 ${isActive ? 'border-indigo-500/50 shadow-lg shadow-indigo-500/20' : 'border-white/10'

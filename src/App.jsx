@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import BookConsultation from './pages/BookConsultation';
+import SelectedPlan from './pages/SelectedPlan';
+import PaymentComingSoon from './pages/PaymentComingSoon';
 import Lenis from 'lenis';
 
 
@@ -41,6 +43,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
+          <Route path="/selected-plan" element={<SelectedPlan />} />
+          <Route path="/payment-coming-soon" element={<PaymentComingSoon />} />
         </Routes>
       </div>
     </BrowserRouter>
