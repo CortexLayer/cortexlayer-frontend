@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![CortexLayer](public/logo.png)
+![CortexLayer](public/cortexlayer.png)
 
 **Transform Your Business with AI-Powered Automation**
 
