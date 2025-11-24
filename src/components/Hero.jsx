@@ -91,7 +91,7 @@ const Hero = () => {
             <div className="relative z-10 max-w-5xl mx-auto px-6 text-center mt-24">
                 <h1 className="hero-text text-5xl md:text-7xl lg:text-8xl font-bold font-sans tracking-tighter mb-8 leading-tight">
                     Deploy AI That Saves Time <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">
                         and Prints Revenue.
                     </span>
                 </h1>
@@ -100,20 +100,7 @@ const Hero = () => {
                     We build intelligent automation and data-driven solutions so you don't need an in-house AI team.
                 </p>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <button className="hero-btn group relative px-8 py-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 text-black font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                        <span className="relative z-10 flex items-center gap-2">
-                            View Our Solutions <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </span>
-                    </button>
 
-                    <button className="hero-btn px-8 py-4 text-white border border-white/20 rounded-full hover:bg-white/10 transition-all font-medium flex items-center gap-2 relative overflow-hidden group">
-                        <span className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        <span className="relative z-10 flex items-center gap-2">
-                            Learn More <ChevronRight className="w-4 h-4" />
-                        </span>
-                    </button>
-                </div>
             </div>
 
             {/* Abstract Mesh Gradient Overlay */}

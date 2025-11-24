@@ -72,7 +72,7 @@ const Footer = () => {
         return () => ctx.revert();
     }, []);
 
-    const letters = "CORTEX™".split("");
+    const letters = "CORTEX".split("");
 
     return (
         <footer ref={containerRef} className="bg-black text-white pt-32 pb-8 overflow-hidden">
@@ -83,8 +83,8 @@ const Footer = () => {
                         <p className="text-gray-400 mb-8 max-w-md">
                             Ready to automate your business? Let's build something extraordinary together.
                         </p>
-                        <a href="mailto:hello@cortexlayer.com" className="text-lg hover:text-gray-300 transition-colors underline underline-offset-4">
-                            hello@cortexlayer.com
+                        <a href="mailto:contact@cortexlayertech.com" className="text-lg hover:text-gray-300 transition-colors underline underline-offset-4">
+                            contact@cortexlayertech.com
                         </a>
                     </div>
                     <div className="flex flex-col md:items-end justify-between">
@@ -129,11 +129,8 @@ const Footer = () => {
                     </div>
 
                     <div className="w-full flex flex-col md:flex-row items-center justify-between mt-16 text-sm text-gray-500">
-                        <p>© 2025 CortexLayer<sup className="text-[8px]">™</sup> Technologies Pvt Ltd</p>
-                        <div className="flex gap-6 mt-4 md:mt-0">
-                            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-                        </div>
+                        <p>© 2025 CortexLayer<sup className="text-[8px]">™</sup> Technologies</p>
+
                     </div>
                 </div>
             </div>

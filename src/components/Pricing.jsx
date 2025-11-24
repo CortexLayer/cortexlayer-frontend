@@ -6,13 +6,15 @@ import { useNavigate } from 'react-router-dom';
 const plans = [
     {
         name: "Starter",
-        price: "$2,500",
-        desc: "Perfect for small businesses starting their automation journey.",
+        setupPrice: "$399",
+        monthlyPrice: "$79",
+        desc: "Perfect for small businesses getting started with AI support",
         features: [
-            "Custom AI Chatbot",
-            "Knowledge Base Integration",
-            "Email Support Automation",
-            "Weekly Performance Reports"
+            "Web chatbot",
+            "10 documents",
+            "1,000 conversations/month",
+            "Basic analytics",
+            "Email fallback"
         ],
         highlight: false,
         borderColor: "border-blue-500",
@@ -20,29 +22,33 @@ const plans = [
     },
     {
         name: "Growth",
-        price: "$5,000",
-        desc: "End-to-end automation for scaling teams.",
+        setupPrice: "$899",
+        monthlyPrice: "$199",
+        desc: "Advanced features for scaling support operations",
         features: [
-            "Everything in Starter",
-            "Multi-Agent Workflows",
-            "CRM & Calendar Integration",
-            "Lead Qualification Agent",
-            "Priority Support"
+            "WhatsApp integration",
+            "50 docs",
+            "5,000 conversations/month",
+            "Advanced analytics",
+            "Human handoff",
+            "Custom branding"
         ],
         highlight: true,
         borderColor: "border-indigo-500",
         glowColor: "shadow-indigo-500/50"
     },
     {
-        name: "Enterprise",
-        price: "Custom",
-        desc: "Bespoke AI infrastructure for large organizations.",
+        name: "Scale",
+        setupPrice: "$1,499",
+        monthlyPrice: "$349",
+        desc: "Enterprise-grade support automation",
         features: [
-            "Full Custom Development",
-            "Private LLM Hosting",
-            "SLA & 24/7 Support",
-            "On-premise Deployment Options",
-            "Dedicated Account Manager"
+            "CRM integration",
+            "Unlimited docs",
+            "API keys",
+            "Multilingual",
+            "SLA 99.5%",
+            "Dedicated success manager"
         ],
         highlight: false,
         borderColor: "border-purple-500",
@@ -67,11 +73,15 @@ const Pricing = () => {
                     viewport={{ once: true }}
                     className="mb-20 text-center"
                 >
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-green-400 mb-6">
+                        <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        <span>Active Service</span>
+                    </div>
                     <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6">
-                        Simple, Transparent Pricing
+                        AI Support & Knowledge Bot — Pricing Plans
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        One-time setup fees. Optional monthly maintenance. No hidden costs.
+                        One-time setup fees + monthly subscription. No hidden costs.
                     </p>
                 </motion.div>
 
@@ -131,9 +141,15 @@ const Pricing = () => {
                                         }`}>
                                         {plan.name}
                                     </h3>
-                                    <div className={`text-4xl font-bold mb-4 transition-colors duration-300 ${isSelected ? 'text-white' : 'text-gray-100'
-                                        }`}>
-                                        {plan.price}
+                                    <div className="mb-4">
+                                        <div className={`text-4xl font-bold mb-1 transition-colors duration-300 ${isSelected ? 'text-white' : 'text-gray-100'
+                                            }`}>
+                                            {plan.setupPrice} <span className="text-lg text-gray-400">setup</span>
+                                        </div>
+                                        <div className={`text-2xl font-bold transition-colors duration-300 ${isSelected ? 'text-gray-300' : 'text-gray-400'
+                                            }`}>
+                                            {plan.monthlyPrice} <span className="text-sm text-gray-500">/month</span>
+                                        </div>
                                     </div>
                                     <p className="text-gray-400 text-sm">{plan.desc}</p>
                                 </div>

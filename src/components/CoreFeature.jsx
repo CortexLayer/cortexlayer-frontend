@@ -8,35 +8,35 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
     {
         icon: Server,
-        title: "Hosted Infrastructure",
-        desc: "Fully managed GPU clusters & API gateways.",
+        title: "Team-Based Accountability",
+        desc: "Not a one-person risk. We're a dedicated AI implementation team.",
         bgColor: "from-blue-500/20 to-indigo-500/20",
         stats: [
-            { label: "GPU Clusters", val: "8", color: "text-blue-400" },
-            { label: "API Calls/s", val: "12k", color: "text-indigo-400" },
-            { label: "Latency", val: "12ms", color: "text-cyan-400" }
+            { label: "Team Size", val: "4+", color: "text-blue-400" },
+            { label: "Delivery", val: "<7d", color: "text-indigo-400" },
+            { label: "Uptime", val: "99.5%", color: "text-cyan-400" }
         ]
     },
     {
         icon: Lock,
-        title: "Enterprise Security",
-        desc: "SOC2 compliant data handling & encryption.",
+        title: "Productized AI Systems",
+        desc: "Ready-to-deploy solutions with ongoing maintenance and monitoring.",
         bgColor: "from-green-500/20 to-emerald-500/20",
         stats: [
-            { label: "Encrypted", val: "100%", color: "text-green-400" },
-            { label: "SOC2", val: "✓", color: "text-emerald-400" },
-            { label: "Audits", val: "24/7", color: "text-teal-400" }
+            { label: "Services", val: "3", color: "text-green-400" },
+            { label: "Support", val: "24/7", color: "text-emerald-400" },
+            { label: "Updates", val: "Auto", color: "text-teal-400" }
         ]
     },
     {
         icon: Share2,
-        title: "Seamless Integration",
-        desc: "Connects with your existing tech stack instantly.",
+        title: "Measurable Results",
+        desc: "Focus on business impact — not just code delivery.",
         bgColor: "from-purple-500/20 to-pink-500/20",
         stats: [
-            { label: "Integrations", val: "50+", color: "text-purple-400" },
-            { label: "APIs", val: "REST", color: "text-pink-400" },
-            { label: "Webhooks", val: "✓", color: "text-fuchsia-400" }
+            { label: "ROI Track", val: "Yes", color: "text-purple-400" },
+            { label: "Analytics", val: "Live", color: "text-pink-400" },
+            { label: "Reports", val: "Auto", color: "text-fuchsia-400" }
         ]
     }
 ];
@@ -82,7 +82,7 @@ const CoreFeature = () => {
                     <div className="relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-indigo-400 mb-6 w-fit">
                             <Zap className="w-3 h-3" />
-                            <span>Production Ready</span>
+                            <span>AI Implementation Partner</span>
                         </div>
 
                         <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 leading-tight">
